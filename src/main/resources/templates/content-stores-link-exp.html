@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Link Expressions</title>
+    <link th:href="@{/css/demo.css}" rel="stylesheet" />
+</head>
+<body>
+<h1>UmmuAqibatul-Khair Content&Stores [styled by Link Expression]: </h1>
+<a th:href="@{/content-stores-var-exp}"> variable-expression </a>
+<p><a th:href="@{/content-stores-sel-exp}"> selection-expression </a></p>
+<p> <a th:href="@{content-stores-link-exp/{id}(id=${id})}">link with parameter</a></p>
+</body>
+</html>
+
+

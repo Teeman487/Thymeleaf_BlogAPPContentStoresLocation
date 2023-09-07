@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>If Unless Attributes</title>
+</head>
+<body>
+<table border ="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Profession</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  th:each = "perso n : ${users}">
+        <!--<td th:text="${userStat.count}"></td>
+        <td th:text="${userStat.index}"></td>
+        <td th:text="${userStat.even}"></td>
+        <td th:text="${userStat.odd}"></td>
+        <td th:text="${userStat.first}"></td>
+        <td th:text="${userStat.last}"></td>-->
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.email}"></td>
+        <td th:text="${person.profession}"></td>
+        <td>
+            <a th:href="@{/update}" th:if="${person.profession}=='AgricExpert'">Update </a>
+           <p><a th:href="@{/delete}" th:if="${person.profession}=='AgricExpert'">Delete </a> </p>
+            <a th:href="@{/view}" th:unless="${person.profession}=='AgricExpert'">View </a>
+
+        </td>
+    </tr>
+    </tbody>
+
+</table>
+
+
+</body>
+</html>

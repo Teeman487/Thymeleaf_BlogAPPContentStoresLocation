@@ -1,0 +1,21 @@
+<!--${VariableName} : Variable expressions: are the most commonly used ones in thymeleaf templates.
+These expressions help bind the data from the template context(model) into resulting html(view).-->
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Content Stores Variable Expressions</title>
+</head>
+<body bgcolor="#f0f8ff">
+<h1> Founder of Content Stores [styled by Variable Expression]:</h1>
+<h2>Owner and Founder Details:</h2>
+<div>     <!--  A generic container, which can be used for defining language or style for the contents-->
+    <p>Name:  <strong th:text="${person.name}"></strong></p>
+    <p>Email:  <strong th:text="${person.email}"></strong></p>
+    <p>Profession:  <strong th:text="${person.profession}"></strong></p>
+    <p>Gender:  <strong th:text="${person.gender}"></strong></p>
+</div>
+</body>
+</html>

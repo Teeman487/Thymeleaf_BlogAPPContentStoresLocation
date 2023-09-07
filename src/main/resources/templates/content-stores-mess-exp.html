@@ -1,0 +1,20 @@
+<!--#{message.property.key} :Message () expressions: let you exterminate common texts into a properties file.
+lets say you have a welcome message that you want to show on every view. However, hardcoding this message on all of these views is a bad idea-->
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Message Expression</title>
+</head>
+<body bgcolor="#5f9ea0">
+<h1>Content Stores Welcome Message</h1>
+
+<h2 th:text="#{app.name}">  </h2>
+<h2 th:text="#{welcome.content}"> </h2>
+</body>
+</html>
+
+
+

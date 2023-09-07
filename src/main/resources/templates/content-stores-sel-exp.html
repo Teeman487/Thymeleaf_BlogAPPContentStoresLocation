@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Content Stores Selection Expression</title>
+</head>
+<body bgcolor="#e9967a">
+<h1>Content Stores Personnel [styled by Selection Expression]:</h1>
+<h2>Personnel Details:</h2>
+<div th:object="${person}">
+    <p>Name:  <strong th:text="*{name}"></strong></p>
+    <p>Email:  <strong th:text="*{email}"></strong></p>
+    <p>Role:  <strong th:text="*{profession}"></strong></p>
+    <p>Gender:  <strong th:text="*{gender}"></strong></p>
+</div>
+</body>
+</html>
+
